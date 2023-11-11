@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_print - func draws a straight a line in the terminal
+ * print_line - func draws a straight a line in the terminal
  * @n: number of times the character _ should be printed
  */
 void print_line(int n)
