@@ -1,28 +1,31 @@
 #include "main.h"
-/**
- * _strncat - func concatenates double strings
- * usinga byte from src
- * @dest: value entered
- * @src: value entered
- * Return: dest
- */
-char *_strncat(char *dest, char *src int n)
-{
-	int a;
-	int b;
 
-	a = 0;
-	while (dest [a] != '\0')
+/**
+ * _strncat - concatenates n bytes from a string to another
+ * @dest: destination string
+ * @src: source string
+ * @n: number of bytes of str to concatenate
+ *
+ * Return: a pointer to the resulting string dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int i, j;
+
+	i = 0;
+	j = 0;
+
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0' && j < n)
 	{
-		a++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	b = 0;
-	while (b < n && src[b] != '\0')
-	{
-		dest[a] = src[b];
-		a++;
-		b++;
-	}
-	dest[a] = '\0';
+
+	dest[i] = '\0';
+
 	return (dest);
 }
